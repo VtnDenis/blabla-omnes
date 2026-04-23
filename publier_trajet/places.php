@@ -1,7 +1,5 @@
 <?php
     include("traitementPlaces.php");
-include("../partials/header.php");
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -14,6 +12,7 @@ include("../partials/header.php");
     <title>Nombres de places</title>
 </head>
 <body>
+<?php include("../partials/header.php"); ?>
 <h1 class="text">Combien de passagers BlaBlaOmnes pouvez-vous accepter ?</h1>
 <form method="post">
     

@@ -1,7 +1,6 @@
 <?php
 
     include("traitementDescription.php");
-include("../partials/header.php");
 ?>
 <!doctype html>
 <html lang="en">
@@ -14,6 +13,7 @@ include("../partials/header.php");
     <title>Description</title>
 </head>
 <body>
+<?php include("../partials/header.php"); ?>
 <h1 class="text">Quelque chose à ajouter sur votre trajet ?</h1>
 <br>
 <form method="post">

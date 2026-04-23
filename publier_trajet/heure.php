@@ -1,7 +1,5 @@
 <?php
     include("traitementHeure.php");
-include("../partials/header.php");
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -14,6 +12,7 @@ include("../partials/header.php");
     <title>Heure de départ</title>
 </head>
 <body>
+<?php include("../partials/header.php"); ?>
 <h1 class="text">Quand partez-vous ?</h1>
 <br>
 <form method="post">

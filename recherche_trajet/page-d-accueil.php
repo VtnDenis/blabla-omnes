@@ -4,8 +4,6 @@
 //        "/", null, false, true);
 //}
 include("traitementRecherche.php");
-include("../partials/header.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -14,13 +12,14 @@ include("../partials/header.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/page-d-accueil.css">
     <link rel="stylesheet" href="css/recherche.css">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Page d'accueil</title>
 </head>
 
 <body>
+<?php include("../partials/header.php"); ?>
 
     <main>
 

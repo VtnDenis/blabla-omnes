@@ -1,7 +1,6 @@
 <?php
 
     include("traitementArrivee.php");
-include("../partials/header.php");
 ?>
 
 <!doctype html>
@@ -18,6 +17,7 @@ include("../partials/header.php");
     <title>Informations arrivée</title>
 </head>
 <body>
+<?php include("../partials/header.php"); ?>
     
 <h1 class="text">Où allez-vous ?</h1>
 <br>

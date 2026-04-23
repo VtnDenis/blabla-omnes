@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../partials/js/menu_deroulant.js">
-        </script>
-    <link rel="stylesheet" href="../profil/info-utilisateur.css">
-</head>
-<body>
+
+<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
+include ("../connexion_bdd.php");
+?>
 <header>
     <div class='div-header'>
         <div class='sm:hidden'>
@@ -101,15 +95,16 @@
                         }
                         ?>
                         <!--Mettre bon lien mes trajets--->
-                        <!-- Structure pour les notifications -->
-                        <div class="notifications-container">
-                            <?php include("../notifications/traitementNotifications.php"); ?>
-                        </div>
-
-                        <!-- Ajout de l'icône de notification -->
-                        <div class='notification-icon'>
-                            <img src="../img/bell.png">
-                        </div>
+                        <!-- Structure pour les notifications : affichée uniquement si connecté -->
+                        <?php if (isset($_SESSION['profil_id'])): ?>
+                            <div class="notifications-container">
+                                <?php include("../notifications/traitementNotifications.php"); ?>
+                            </div>
+                            <!-- Ajout de l'icône de notification -->
+                            <div class='notification-icon'>
+                                <img src="../img/bell.png">
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -125,15 +120,14 @@
         const notificationIcon = document.querySelector('.notification-icon');
         const notificationsContainer = document.querySelector('.notifications-container');
 
-        notificationIcon.addEventListener('click', function() {
-            if (notificationsContainer.style.display === 'block') {
-                notificationsContainer.style.display = 'none'; // Cacher les notifications si déjà affichées
-            } else {
-                notificationsContainer.style.display = 'block'; // Afficher les notifications
-            }
-        });
+        if (notificationIcon && notificationsContainer) {
+            notificationIcon.addEventListener('click', function() {
+                if (notificationsContainer.style.display === 'block') {
+                    notificationsContainer.style.display = 'none';
+                } else {
+                    notificationsContainer.style.display = 'block';
+                }
+            });
+        }
     });
-
 </script>
-</body>
-</html>

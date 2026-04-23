@@ -1,7 +1,5 @@
 <?php
     include("traitementVoiture.php");
-include("../partials/header.php");
-
 ?>
 
 <!doctype html>
@@ -15,6 +13,7 @@ include("../partials/header.php");
     <title>Document</title>
 </head>
 <body>
+<?php include("../partials/header.php"); ?>
     <h1 class="text">Ma voiture</h1>
     <br>
     <form method="post" enctype="multipart/form-data">

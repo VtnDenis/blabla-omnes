@@ -2,8 +2,6 @@
 session_start();
 
 include("traitementPreferences.php");
-include("../partials/header.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -12,12 +10,14 @@ include("../partials/header.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Préférences</title>
     <link rel="stylesheet" href="preferences.css">
     <script src="js/preferences.js"></script>
 </head>
 
 <body>
+<?php include("../partials/header.php"); ?>
     <div class="bloc">
         <span class="flex justify-center pt-20 pb-10 text-black font-manrope text-3xl">Définissez vos préférences</span>
         <form method="post" action="" onsubmit="return validateForm()">

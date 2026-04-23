@@ -1,7 +1,5 @@
 <?php
     include("traitementPrix.php");
-include("../partials/header.php");
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -14,6 +12,7 @@ include("../partials/header.php");
     <title>Prix</title>
 </head>
 <body>
+<?php include("../partials/header.php"); ?>
 <h1 class="text">Fixez votre prix par place</h1>
 <br>
 <form method="post">
